@@ -19,11 +19,11 @@ cacheSolve <- function(x,...) {
     # return matrix that is the inverse of 'x'
     inv <- x$getinverse()
     if(!is.null(inv)) {
-        message('Getting Cache Data')
+        message('Getting Cache Data')  # set message for inverse
         return(inv)
     }
     mat <- x$get()
     inv <- solve(mat,...)
     x$getinverse(inv)
-    inv
+    inv  # print inverse
 }
